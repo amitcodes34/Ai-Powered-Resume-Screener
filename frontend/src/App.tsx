@@ -44,7 +44,8 @@ function App() {
     });
 
     try {
-      const response = await axios.post('http://localhost:8000/upload', formData, {
+      const apiUrl = import.meta.env.VITE_API_URL || '/api';
+      const response = await axios.post(`${apiUrl}/upload`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setResults(response.data);

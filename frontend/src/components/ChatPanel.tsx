@@ -30,7 +30,8 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ candidates }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/chat', {
+      const apiUrl = import.meta.env.VITE_API_URL || '/api';
+      const response = await axios.post(`${apiUrl}/chat`, {
         query: userMsg,
         context: candidates
       });
