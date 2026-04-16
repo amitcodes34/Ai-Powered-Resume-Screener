@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, CheckCircle2, AlertCircle, ChevronRight } from 'lucide-react';
+import { Award, CheckCircle2, AlertCircle } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
